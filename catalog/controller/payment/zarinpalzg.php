@@ -29,7 +29,7 @@ class ControllerPaymentzarinpalzg extends Controller {
 
 		$this->data['back'] = $this->url->https('checkout/payment');
 
-		$client = new SoapClient("https://www.zarinpal.com/pg/services/WebGate/wsdl");
+		$client = new SoapClient("https://de.zarinpal.com/pg/services/WebGate/wsdl");
 
 	if((!$client))
 		die( "Can not connect to zarinpal.<br>" );
@@ -100,7 +100,7 @@ class ControllerPaymentzarinpalzg extends Controller {
 function verify_payment($authority, $amount){
 
 	if($authority){
-		$client = new SoapClient("https://www.zarinpal.com/pg/services/WebGate/wsdl");
+		$client = new SoapClient("https://de.zarinpal.com/pg/services/WebGate/wsdl");
 		
 		if ((!$client))
 			{echo  "Error: can not connect to zarinpal.<br>";return false;}
