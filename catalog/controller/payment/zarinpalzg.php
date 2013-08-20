@@ -121,6 +121,7 @@ function verify_payment($authority, $amount){
 
 			else {
 				return false;
+				echo'ERR'.$res->Status;
 			}
 		
 		}
